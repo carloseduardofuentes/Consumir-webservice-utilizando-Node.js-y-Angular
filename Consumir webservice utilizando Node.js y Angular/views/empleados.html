@@ -1,0 +1,38 @@
+<h1>Listado de empleados</h1>
+<a href="/#!/empleados/nuevo">Nuevo Registro</a>
+<br>
+Buscar:
+<input type="text" ng-model="filtro">
+<table class="table table-bordered">
+  <thead class="table-dark">
+  <th>nombre</th>
+  <th>apellido</th>
+  <th>salario</th>
+  <th>departamento</th>
+  <th>estado</th>
+  <th>Eliminar</th>
+  </thead>
+  <tbody>
+  <tr ng-repeat="item in empleados | filter : filtro">
+    <td>
+      {{item.nombres | uppercase}}
+    </td>
+    <td>
+      {{item.apellidos}}
+    </td>
+    <td>
+      {{item.salario | currency : $ : 2}}
+    </td>
+    <td>
+      {{item.departamentosByIdDepartamento.nombre}}
+    </td>
+    <td>
+      {{item.estadosByIdEstado.estado}}
+    </td>
+    <td>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+

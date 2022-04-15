@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Formularios con Angular JS</h3>
+  <form role="form" name="formulario" ng-submit="onSubmit()">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input class="form-control" required name="estado" ng-model="estado.estado" type="text"/>
+      <small ng-show="formulario.estado.$dirty && formulario.estado.$error.required" class="form-text text-danger">
+        Campo Obligatorio
+      </small>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" ng-disabled="formulario.$invalid" type="submit">Enviar</button>
+      <button class="btn" type="reset">Limpiar</button>
+    </div>
+    <hr>
+    <a href="./#!/estados">Ver datos</a>
+  </form>
+</div>
+</div>
